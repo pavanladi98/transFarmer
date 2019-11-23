@@ -5,13 +5,21 @@ import { Link } from "react-router-dom";
 export default class BillingPage extends React.Component {
   render() {
     const data = this.props.location.state;
-    const dataSource = data;
+    const dataSource = data.filter(item => item.qty !== 0);
     dataSource.map(item => (item.total = item.qty * item.price));
+    let totalPrice = 0;
+    let totalQuantity = 0;
+    dataSource.forEach(item => {
+      totalPrice += item.total;
+      totalQuantity += parseInt(item.qty);
+    });
+    dataSource.push({ total: totalPrice, qty: totalQuantity, title: "Total" });
     const columns = [
       {
         title: "Item",
         dataIndex: "title",
-        key: "item"
+        key: "item",
+        render: item => (item === "Total"? <b>{item}</b>: item)
       },
       {
         title: "Quantity",
@@ -22,7 +30,7 @@ export default class BillingPage extends React.Component {
         title: "Rate",
         dataIndex: "price",
         key: "price",
-        render: text => <>&#8377;{text}</>
+        render: text => (text ? <>&#8377;{text}</> : null)
       },
       {
         title: "Price",
@@ -37,9 +45,9 @@ export default class BillingPage extends React.Component {
           {/* {data.map(item => (
             <li>{item.title} {item.qty} {item.price}</li>
           ))} */}
-          <Table columns={columns} dataSource={data} pagination={false} />
+          <Table columns={columns} dataSource={dataSource} pagination={false} />
         </Card>
-        <Link to={{pathname: "/sell", state: data}}>
+        <Link to={{ pathname: "/sell", state: data }}>
           <Button>Back</Button>
         </Link>
       </div>
