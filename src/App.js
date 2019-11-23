@@ -10,12 +10,32 @@ import "antd/dist/antd.css";
 function App() {
   return (
     <Router>
-      <div style={{ backgroundColor: "black", height: "50px" }}>
+      <div style={{ backgroundColor: "#3366cc", height: "10%" }}>
         <Link to="/">
-          <h1 style={{ color: "white", display: "inline-block" }}> &nbsp; transFarmer</h1>
+          <h1
+            style={{
+              color: "white",
+              display: "inline-block",
+              fontStyle: "italic",
+              marginLeft: "8%",
+              paddingTop: "2px"
+            }}
+          >
+            {" "}
+            &nbsp; transFarmer
+          </h1>
         </Link>
         <Link>
-          <Icon type="shopping-cart" style={{float: "right", fontSize: "32px", marginTop: "10px", marginRight: "20px"}}/>
+          <Icon
+            type="shopping-cart"
+            style={{
+              float: "right",
+              fontSize: "32px",
+              marginTop: "10px",
+              marginRight: "10%",
+              color: "white"
+            }}
+          />
         </Link>
       </div>
       <Route path="/" exact component={HomePage} />

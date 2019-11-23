@@ -13,7 +13,7 @@ class SellPage extends React.Component {
           {
             id: 0,
             title: "Rice",
-            quantity: "40rs/KG",
+            quantity: "40 / kg",
             imgSrc:
               "https://bethlehemplace.org/wp-content/uploads/2013/06/81defb3758f2613d213f771d297601bd_salt-clipart-sack-rice-pencil-and-in-color-salt-clipart-sack-rice-rice-clipart-transparent_360-352.png",
             qty: 0,
@@ -22,7 +22,7 @@ class SellPage extends React.Component {
           {
             id: 1,
             title: "Wheat",
-            quantity: "20rs/KG",
+            quantity: "20 / kg",
             imgSrc:
               "http://desifoodkart.com/wp-content/uploads/2019/02/Chakki-Atta-Flour.jpg",
             qty: 0,
@@ -31,7 +31,7 @@ class SellPage extends React.Component {
           {
             id: 2,
             title: "Tomato",
-            quantity: "30rs/KG",
+            quantity: "30 / kg",
             imgSrc: "https://grist.files.wordpress.com/2009/09/tomato.jpg",
             qty: 0,
             price: 30
@@ -75,39 +75,32 @@ class SellPage extends React.Component {
     const { data } = this.state;
     return (
       <>
-        <h1 style={{ margin: "20px auto", width: "400px" }}>
-          Sell Your Produce
+        <h1 style={{ margin: "2% 40% 1% 40%", width: "20%" }}>
+          Sell items here
         </h1>
         <div style={{ margin: "0px 10%" }}>
           <List
             itemLayout="horizontal"
             bordered
             dataSource={data}
-            footer={<div>{this.state.totalQuantity}</div>}
             renderItem={item => (
-              <List.Item
-              // actions={[
-              //   <a
-              //     key="list-loadmore-edit"
-              //     onClick={() => this.addQuantity(item.id)}
-              //   >
-              //     add
-              //   </a>,
-              //   <a key="list-loadmore-edit">
-              //     {" "}
-              //     onClick={() => this.removeQuantity(item.id)}>delete
-              //   </a>
-              // ]}
-              >
+              <List.Item>
                 <List.Item.Meta
-                  avatar={<Avatar src={item.imgSrc} />}
-                  title={<a href="https://ant.design">{item.title}</a>}
-                  description={item.quantity}
+                  avatar={
+                    <Avatar src={item.imgSrc} style={{ marginRight: "20px" }} />
+                  }
+                  title={item.title}
+                  description={<>&#8377;{item.quantity}</>}
+                  style={{ marginLeft: "20px" }}
                 />
                 <div>
                   Qty:
                   <Input
-                    style={{ width: "100px" }}
+                    style={{
+                      width: "100px",
+                      marginLeft: "10px",
+                      marginRight: "30px"
+                    }}
                     type="number"
                     onChange={e => this.setQuantity(e, item.id)}
                     value={item.qty}
@@ -123,7 +116,9 @@ class SellPage extends React.Component {
             state: this.state.data
           }}
         >
-          <Button>Sell</Button>
+          <Button type="primary" size="large" style={{ margin: "3% 45% 1% 45%" }}>
+            Sell
+          </Button>
         </Link>
       </>
     );

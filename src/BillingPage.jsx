@@ -41,10 +41,7 @@ export default class BillingPage extends React.Component {
     ];
     return (
       <div style={{ background: "#ECECEC", padding: "30px" }}>
-        <Card title="Card title" bordered={false} style={{ width: "50%" }}>
-          {/* {data.map(item => (
-            <li>{item.title} {item.qty} {item.price}</li>
-          ))} */}
+        <Card title="Order details" bordered={false} style={{ width: "50%", margin:"auto" }}>
           <Table columns={columns} dataSource={dataSource} pagination={false} />
         </Card>
         <Link to={{ pathname: "/sell", state: data }}>
