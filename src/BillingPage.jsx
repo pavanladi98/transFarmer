@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 export default class BillingPage extends React.Component {
   render() {
+    const { type } = this.props;
     const data = this.props.location.state;
     const dataSource = data.filter(item => item.qty !== 0);
     dataSource.map(item => (item.total = item.qty * item.price));
@@ -42,7 +43,7 @@ export default class BillingPage extends React.Component {
     return (
       <div style={{ background: "#ECECEC", padding: "30px" }}>
         <Card
-          title="Order details"
+          title="Order summary"
           bordered={false}
           style={{
             width: "50%",
@@ -62,7 +63,7 @@ export default class BillingPage extends React.Component {
             Back
           </Button>
         </Link>
-        <Link to="/success">
+        <Link to={type === "sell" ? "/sell/success" : "/buy/success"}>
           <Button
             type="primary"
             size="large"

@@ -8,14 +8,16 @@ export default class HomePage extends React.Component {
     return (
       <div className="buy-sell">
         <div>
-          <Button type="primary" size="large">
-            Buy
-          </Button>
+          <Link to="/buy">
+            <Button type="primary" className="buy-sell-button">
+              <b>Buy</b>
+            </Button>
+          </Link>
         </div>
         <div>
           <Link to="/sell">
-            <Button type="secondary" size="large">
-              Sell
+            <Button type="secondary" className="buy-sell-button">
+              <b>Sell</b>
             </Button>
           </Link>
         </div>

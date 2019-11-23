@@ -19,7 +19,7 @@ function App() {
               display: "inline-block",
               fontStyle: "italic",
               marginLeft: "8%",
-              paddingTop: "2px",
+              paddingTop: "2px"
             }}
           >
             {" "}
@@ -40,9 +40,32 @@ function App() {
         </Link>
       </div>
       <Route path="/" exact component={HomePage} />
-      <Route path="/sell" component={SellPage} />
-      <Route path="/billing" component={BillingPage} />
-      <Route path="/success" component={SuccessPage} />
+      <Route
+        path="/sell"
+        exact
+        render={props => <SellPage {...props} type="sell" />}
+      />
+      <Route
+        path="/buy"
+        exact
+        render={props => <SellPage {...props} type="buy" />}
+      />
+      <Route
+        path="/sell/billing"
+        render={props => <BillingPage {...props} type="sell" />}
+      />
+      <Route
+        path="/buy/billing"
+        render={props => <BillingPage {...props} type="buy" />}
+      />
+      <Route
+        path="/sell/success"
+        render={props => <SuccessPage {...props} type="sell" />}
+      />
+      <Route
+        path="/buy/success"
+        render={props => <SuccessPage {...props} type="buy" />}
+      />
     </Router>
   );
 }

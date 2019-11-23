@@ -73,10 +73,11 @@ class SellPage extends React.Component {
 
   render() {
     const { data } = this.state;
+    const { type } = this.props;
     return (
       <>
         <h1 style={{ margin: "2% 40% 1% 40%", width: "20%" }}>
-          Sell items here
+          {type === "sell" ? "Sell items here" : "Choose items to buy"}
         </h1>
         <div style={{ margin: "0px 10%" }}>
           <List
@@ -112,12 +113,15 @@ class SellPage extends React.Component {
         </div>
         <Link
           to={{
-            pathname: "/billing",
+            pathname: type === "sell" ? "sell/billing" : "buy/billing",
             state: this.state.data
           }}
         >
-          <Button type="primary" size="large" style={{ margin: "3% 45% 0% 45%" }}>
-            Sell
+          <Button
+            type="primary"
+            style={{ margin: "3% 45% 0% 45%", width: "100px", height: "50px" }}
+          >
+            <b>{type === "sell" ? "Sell" : "Buy"}</b>
           </Button>
         </Link>
       </>

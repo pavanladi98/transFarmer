@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 
 const { Meta } = Card;
 
-export default class BillingPage extends React.Component {
+export default class SuccessPage extends React.Component {
   render() {
+    const { type } = this.props;
     return (
       <div style={{ padding: "30px" }}>
         <Card
@@ -25,7 +26,11 @@ export default class BillingPage extends React.Component {
               />
             }
             title="Your order received successfully"
-            description="We will collect the items from you soon"
+            description={
+              type === "sell"
+                ? "We will collect the items from you soon"
+                : "Items will be delivered soon"
+            }
           />
         </Card>
         <Link to={{ pathname: "/" }}>
