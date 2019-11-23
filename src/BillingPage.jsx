@@ -19,7 +19,7 @@ export default class BillingPage extends React.Component {
         title: "Item",
         dataIndex: "title",
         key: "item",
-        render: item => (item === "Total"? <b>{item}</b>: item)
+        render: item => (item === "Total" ? <b>{item}</b> : item)
       },
       {
         title: "Quantity",
@@ -41,11 +41,36 @@ export default class BillingPage extends React.Component {
     ];
     return (
       <div style={{ background: "#ECECEC", padding: "30px" }}>
-        <Card title="Order details" bordered={false} style={{ width: "50%", margin:"auto" }}>
+        <Card
+          title="Order details"
+          bordered={false}
+          style={{
+            width: "50%",
+            margin: "auto",
+            height: "380px",
+            overflowY: "scroll"
+          }}
+        >
           <Table columns={columns} dataSource={dataSource} pagination={false} />
         </Card>
         <Link to={{ pathname: "/sell", state: data }}>
-          <Button>Back</Button>
+          <Button
+            type="secondary"
+            size="large"
+            style={{ margin: "3% 5% 0% 40%" }}
+          >
+            Back
+          </Button>
+        </Link>
+        <Link to="/success">
+          <Button
+            type="primary"
+            size="large"
+            style={{ margin: "3% 25% 0% 5%" }}
+            disabled={!totalQuantity}
+          >
+            Confirm
+          </Button>
         </Link>
       </div>
     );

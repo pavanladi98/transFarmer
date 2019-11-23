@@ -4,6 +4,7 @@ import { Icon } from "antd";
 import HomePage from "../src/HomePage.jsx";
 import SellPage from "./SellPage.jsx";
 import BillingPage from "./BillingPage.jsx";
+import SuccessPage from "./SuccessPage.jsx";
 import "./App.css";
 import "antd/dist/antd.css";
 
@@ -18,7 +19,7 @@ function App() {
               display: "inline-block",
               fontStyle: "italic",
               marginLeft: "8%",
-              paddingTop: "2px"
+              paddingTop: "2px",
             }}
           >
             {" "}
@@ -41,6 +42,7 @@ function App() {
       <Route path="/" exact component={HomePage} />
       <Route path="/sell" component={SellPage} />
       <Route path="/billing" component={BillingPage} />
+      <Route path="/success" component={SuccessPage} />
     </Router>
   );
 }

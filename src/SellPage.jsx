@@ -116,7 +116,7 @@ class SellPage extends React.Component {
             state: this.state.data
           }}
         >
-          <Button type="primary" size="large" style={{ margin: "3% 45% 1% 45%" }}>
+          <Button type="primary" size="large" style={{ margin: "3% 45% 0% 45%" }}>
             Sell
           </Button>
         </Link>
