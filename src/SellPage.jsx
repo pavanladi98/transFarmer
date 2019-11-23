@@ -76,7 +76,7 @@ class SellPage extends React.Component {
     const { type } = this.props;
     return (
       <>
-        <h1 style={{ margin: "2% 40% 1% 40%", width: "20%" }}>
+        <h1 style={{ margin: "2% 35% 1% 35%", width: "30%", textAlign: "center" }}>
           {type === "sell" ? "Sell items here" : "Choose items to buy"}
         </h1>
         <div style={{ margin: "0px 10%" }}>
@@ -105,6 +105,7 @@ class SellPage extends React.Component {
                     type="number"
                     onChange={e => this.setQuantity(e, item.id)}
                     value={item.qty}
+                    placeholder="In Kgs"
                   />
                 </div>
               </List.Item>
