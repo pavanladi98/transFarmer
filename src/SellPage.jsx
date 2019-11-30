@@ -77,7 +77,7 @@ class SellPage extends React.Component {
     return (
       <>
         <h1
-          style={{ margin: "30px 50px 10px 50px", width: "300px", textAlign: "center", fontSize: "20px" }}
+          style={{ margin: "30px 60px 20px 60px", width: "300px", textAlign: "center", fontSize: "20px" }}
         >
           {type === "sell" ? "Choose items to sell" : "Choose items to buy"}
         </h1>
@@ -90,7 +90,7 @@ class SellPage extends React.Component {
               <List.Item>
                 <List.Item.Meta
                   avatar={
-                    <Avatar src={item.imgSrc} style={{ marginRight: "20px" }} />
+                    <Avatar src={item.imgSrc} style={{ marginRight: "5px" }} />
                   }
                   title={item.title}
                   description={
@@ -103,8 +103,8 @@ class SellPage extends React.Component {
                   <Input
                     style={{
                       width: "75px",
-                      marginLeft: "10px",
-                      marginRight: "10px"
+                      marginLeft: "5px",
+                      marginRight: "5px"
                     }}
                     type="number"
                     onChange={e => this.setQuantity(e, item.id)}
@@ -124,7 +124,7 @@ class SellPage extends React.Component {
         >
           <Button
             type="primary"
-            style={{ margin: "50px 150px 10px 150px", width: "100px", height: "50px" }}
+            style={{ margin: "50px 160px 10px 160px", width: "100px", height: "50px" }}
           >
             <b>{type === "sell" ? "Proceed" : "Buy"}</b>
           </Button>
