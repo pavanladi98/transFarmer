@@ -18,7 +18,7 @@ function App() {
               color: "white",
               display: "inline-block",
               fontStyle: "italic",
-              marginLeft: "8%",
+              marginLeft: "5px",
               paddingTop: "2px"
             }}
           >
