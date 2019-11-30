@@ -64,7 +64,7 @@ export default class AddressPage extends React.Component {
         /> */}
 
         <Radio.Group style={{marginTop: "20px"}} onChange={this.onChange} value={this.state.value}>
-          <Radio style={{height: "50px", width: "250px", margin: "0px 20px"}} value={1}>
+          <Radio style={{height: "50px", width: "250px", margin: "200px 20px"}} value={1}>
             <Card title={addresses[0].Name} style={{}}>
               {addresses[0].Door}
               <br />
@@ -78,7 +78,7 @@ export default class AddressPage extends React.Component {
               <br />
             </Card>
           </Radio>
-          <Radio style={{height: "100px", width: "300px", marginLeft: "10px"}} value={2}>
+          <Radio style={{height: "50px", width: "250px", margin: "200px 20px"}} value={2}>
             <Card title={addresses[1].Name} style={{}}>
               {addresses[1].Door}
               <br />
@@ -92,7 +92,7 @@ export default class AddressPage extends React.Component {
               <br />
             </Card>
           </Radio>
-          <Radio style={{height: "100px", width: "300px", marginLeft: "10px"}} value={3}>
+          <Radio style={{height: "50px", width: "250px", margin: "200px 20px"}} value={3}>
             <Card title={addresses[2].Name} style={{}}>
               {addresses[2].Door}
               <br />
