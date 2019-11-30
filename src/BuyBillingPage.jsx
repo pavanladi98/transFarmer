@@ -27,28 +27,26 @@ export default class BillingPage extends React.Component {
         dataIndex: "qty",
         key: "qty"
       },
-      // {
-      //   title: "Rate",
-      //   dataIndex: "price",
-      //   key: "price",
-      //   render: text => (text ? <>&#8377;{text}</> : null)
-      // },
-      // {
-      //   title: "Price",
-      //   dataIndex: "total",
-      //   key: "total",
-      //   render: text => <>&#8377;{text}</>
-      // }
+      {
+        title: "Rate",
+        dataIndex: "price",
+        key: "price",
+        render: text => (text ? <>&#8377;{text}</> : null)
+      },
+      {
+        title: "Price",
+        dataIndex: "total",
+        key: "total",
+        render: text => <>&#8377;{text}</>
+      }
     ];
-    delete dataSource.price;
-    delete dataSource.total;
     return (
       <div style={{ background: "#ECECEC"}}>
         <Card
           title="Order summary"
           bordered={false}
           style={{
-            width: "100%",
+            width: "80%",
             margin: "auto",
             height: "380px",
             overflowY: "scroll"

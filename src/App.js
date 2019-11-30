@@ -4,6 +4,7 @@ import { Icon } from "antd";
 import HomePage from "../src/HomePage.jsx";
 import SellPage from "./SellPage.jsx";
 import BillingPage from "./BillingPage.jsx";
+import BuyBillingPage from "./BuyBillingPage.jsx";
 import SuccessPage from "./SuccessPage.jsx";
 import "./App.css";
 import "antd/dist/antd.css";
@@ -56,7 +57,7 @@ function App() {
       />
       <Route
         path="/buy/billing"
-        render={props => <BillingPage {...props} type="buy" />}
+        render={props => <BuyBillingPage {...props} type="buy" />}
       />
       <Route
         path="/sell/success"
