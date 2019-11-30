@@ -41,7 +41,7 @@ export default class BillingPage extends React.Component {
       }
     ];
     return (
-      <div style={{ background: "#ECECEC", padding: "30px" }}>
+      <div style={{ background: "#ECECEC"}}>
         <Card
           title="Order summary"
           bordered={false}
@@ -58,7 +58,7 @@ export default class BillingPage extends React.Component {
           <Button
             type="secondary"
             size="large"
-            style={{ margin: "20px 100px 0px 100px" }}
+            style={{ margin: "20px 50px 0px 50px" }}
           >
             Back
           </Button>
@@ -67,7 +67,7 @@ export default class BillingPage extends React.Component {
           <Button
             type="primary"
             size="large"
-            style={{ margin: "20px 100px 0px 0px" }}
+            style={{ margin: "20px 50px 0px 0px" }}
             disabled={!totalQuantity}
           >
             Confirm
