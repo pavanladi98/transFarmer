@@ -77,7 +77,7 @@ class SellPage extends React.Component {
     return (
       <>
         <h1
-          style={{ margin: "30px 60px 20px 60px", width: "300px", textAlign: "center", fontSize: "20px" }}
+          style={{ margin: "30px 60px 20px 50px", width: "300px", textAlign: "center", fontSize: "20px" }}
         >
           {type === "sell" ? "Choose items to sell" : "Choose items to buy"}
         </h1>

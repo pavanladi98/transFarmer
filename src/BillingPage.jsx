@@ -46,7 +46,7 @@ export default class BillingPage extends React.Component {
           title="Order summary"
           bordered={false}
           style={{
-            width: "50%",
+            width: "80%",
             margin: "auto",
             height: "380px",
             overflowY: "scroll"
@@ -58,7 +58,7 @@ export default class BillingPage extends React.Component {
           <Button
             type="secondary"
             size="large"
-            style={{ margin: "3% 5% 0% 40%" }}
+            style={{ margin: "20px 100px 0px 100px" }}
           >
             Back
           </Button>
@@ -67,7 +67,7 @@ export default class BillingPage extends React.Component {
           <Button
             type="primary"
             size="large"
-            style={{ margin: "3% 25% 0% 5%" }}
+            style={{ margin: "20px 100px 0px 0px" }}
             disabled={!totalQuantity}
           >
             Confirm
