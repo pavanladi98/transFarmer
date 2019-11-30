@@ -38,7 +38,7 @@ export default class SuccessPage extends React.Component {
         <Card
           title={"Selected Address"}
           style={{
-            width: "50%",
+            width: "75%",
             height: "210px",
             margin: "50px auto auto auto"
           }}
