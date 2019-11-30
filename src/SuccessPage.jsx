@@ -11,7 +11,7 @@ export default class SuccessPage extends React.Component {
       <div style={{ padding: "30px" }}>
         <Card
           style={{
-            width: "80%",
+            width: "95%",
             margin: "50px auto auto auto",
             backgroundColor: "#ECECEC"
           }}
@@ -22,7 +22,7 @@ export default class SuccessPage extends React.Component {
                 type="check-circle"
                 theme="twoTone"
                 twoToneColor="#52c41a"
-                style={{ marginRight: "50px", fontSize: "50px" }}
+                style={{ marginRight: "10px", fontSize: "50px" }}
               />
             }
             title="Your order received successfully"
@@ -37,7 +37,7 @@ export default class SuccessPage extends React.Component {
           <Button
             type="secondary"
             size="large"
-            style={{ margin: "30px 100px 50px 100px" }}
+            style={{ margin: "30px 150px 50px 70px" }}
           >
             Go back to Home
           </Button>
