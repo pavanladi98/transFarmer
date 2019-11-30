@@ -78,7 +78,7 @@ export default class AddressPage extends React.Component {
               <br />
             </Card>
           </Radio>
-          <Radio style={{height: "100px", width: "300px", marginLeft: "10px"}}} value={2}>
+          <Radio style={{height: "100px", width: "300px", marginLeft: "10px"}} value={2}>
             <Card title={addresses[1].Name} style={{}}>
               {addresses[1].Door}
               <br />
