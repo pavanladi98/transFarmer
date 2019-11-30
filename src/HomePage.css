@@ -5,11 +5,11 @@
   width: 200px;
 }
 .buy-sell > div {
-  margin: 50px 20px;
+  margin: 50px 20px 0px 20px;
 }
 
 .buy-sell-button {
-  width: 200px;
+  width: 150px;
 }
 
 .buy-sell .ant-btn-primary {
