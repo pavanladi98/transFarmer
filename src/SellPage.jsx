@@ -96,15 +96,15 @@ class SellPage extends React.Component {
                   description={
                     type === "sell" ? "" : <>&#8377;{item.quantity}</>
                   }
-                  style={{ marginLeft: "20px" }}
+                  style={{ marginLeft: "10px" }}
                 />
                 <div>
                   Qty:
                   <Input
                     style={{
-                      width: "100px",
+                      width: "75px",
                       marginLeft: "10px",
-                      marginRight: "30px"
+                      marginRight: "10px"
                     }}
                     type="number"
                     onChange={e => this.setQuantity(e, item.id)}
@@ -124,7 +124,7 @@ class SellPage extends React.Component {
         >
           <Button
             type="primary"
-            style={{ margin: "10px 45% 10px 45%", width: "100px", height: "50px" }}
+            style={{ margin: "50px 150px 10px 150px", width: "100px", height: "50px" }}
           >
             <b>{type === "sell" ? "Proceed" : "Buy"}</b>
           </Button>
