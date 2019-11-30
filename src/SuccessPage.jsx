@@ -8,6 +8,7 @@ export default class SuccessPage extends React.Component {
   render() {
     const { type } = this.props;
     const address = this.props.location.state[0];
+    console.log(address);
     return (
       <div style={{ padding: "30px" }}>
         <Card
@@ -26,13 +27,34 @@ export default class SuccessPage extends React.Component {
                 style={{ marginRight: "10px", fontSize: "50px" }}
               />
             }
-            title="Your order received successfully"
+            title="Order received successfully"
             description={
               type === "sell"
                 ? "We will collect the items from you soon"
                 : "Items will be delivered soon"
             }
           />
+        </Card>
+        <Card
+          title={"Selected Address"}
+          style={{
+            width: "50%",
+            height: "210px",
+            margin: "50px auto auto auto"
+          }}
+        >
+          {address.Name}
+          <br />
+          {address.Door}
+          <br />
+          {address.Near}
+          <br />
+          {address.Village}
+          <br />
+          {address.PinCode}
+          <br />
+          {address.State}
+          <br />
         </Card>
         {/* <Card
           style={{
@@ -47,7 +69,7 @@ export default class SuccessPage extends React.Component {
           <Button
             type="secondary"
             size="large"
-            style={{ margin: "30px 150px 50px 70px" }}
+            style={{ margin: "30px 150px 50px 80px" }}
           >
             Go back to Home
           </Button>

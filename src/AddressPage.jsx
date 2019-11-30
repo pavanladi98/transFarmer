@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, List, Button, Radio } from "antd";
+import { Card, Button, Radio } from "antd";
 import { Link } from "react-router-dom";
 
 export default class AddressPage extends React.Component {
@@ -16,55 +16,45 @@ export default class AddressPage extends React.Component {
     const { type } = this.props;
     const addresses = [
       {
-        Name: "Person1",
-        Door: "do-or-1",
-        Near: "near add 1",
+        Name: "Hacker Kumar",
+        Door: "8-6-107",
+        Near: "near SBI",
         PinCode: "123456",
-        Village: "village1",
-        State: "state1"
+        Village: "Vizag",
+        State: "State Pradesh"
       },
       {
-        Name: "Person2",
-        Door: "do-or-2",
-        Near: "near add 2",
+        Name: "Hacker Kumar",
+        Door: "1-2-304",
+        Near: "near add2",
         PinCode: "123456",
-        Village: "village1",
-        State: "state1"
+        Village: "Vizag",
+        State: "State Pradesh"
       },
       {
-        Name: "Person3",
-        Door: "do-or-3",
-        Near: "near add 3",
+        Name: "Abcd hacker",
+        Door: "19-2-304",
+        Near: "near add3",
         PinCode: "123456",
-        Village: "village1",
-        State: "state1"
+        Village: "Vizag",
+        State: "State Pradesh"
       }
     ];
     return (
       <div>
-        {/* <List
-          grid={{ gutter: 16, column: 3 }}
-          dataSource={addresses}
-          renderItem={item => (
-            <List.Item style={{ margin: "50px 50px 50px 50px" }}>
-              <Card title={item.Name} style={{}}>
-                {item.Door}
-                <br />
-                {item.Near}
-                <br />
-                {item.Village}
-                <br />
-                {item.PinCode}
-                <br />
-                {item.State}
-                <br />
-              </Card>
-            </List.Item>
-          )}
-        /> */}
-
-        <Radio.Group style={{marginTop: "20px"}} onChange={this.onChange} value={this.state.value}>
-          <Radio style={{height: "50px", width: "250px", margin: "50px 20px 0px 20px"}} value={1}>
+        <Radio.Group
+          style={{ marginTop: "20px" }}
+          onChange={this.onChange}
+          value={this.state.value}
+        >
+          <Radio
+            style={{
+              height: "50px",
+              width: "250px",
+              margin: "50px 20px 20px 20px"
+            }}
+            value={1}
+          >
             <Card title={addresses[0].Name} style={{}}>
               {addresses[0].Door}
               <br />
@@ -78,7 +68,14 @@ export default class AddressPage extends React.Component {
               <br />
             </Card>
           </Radio>
-          <Radio style={{height: "50px", width: "250px", margin: "50px 20px 0px 20px"}} value={2}>
+          <Radio
+            style={{
+              height: "50px",
+              width: "250px",
+              margin: "0px 20px 20px 20px"
+            }}
+            value={2}
+          >
             <Card title={addresses[1].Name} style={{}}>
               {addresses[1].Door}
               <br />
@@ -92,7 +89,14 @@ export default class AddressPage extends React.Component {
               <br />
             </Card>
           </Radio>
-          <Radio style={{height: "50px", width: "250px", margin: "50px 20px 0px 20px"}} value={3}>
+          <Radio
+            style={{
+              height: "50px",
+              width: "250px",
+              margin: "0px 20px 0px 20px"
+            }}
+            value={3}
+          >
             <Card title={addresses[2].Name} style={{}}>
               {addresses[2].Door}
               <br />
@@ -110,14 +114,13 @@ export default class AddressPage extends React.Component {
         <Link
           to={{
             pathname: "success",
-            state: [addresses[this.state.value-1]]
+            state: [addresses[this.state.value - 1]]
           }}
         >
-           
           <Button
             type="primary"
             size="large"
-            style={{ margin: "20px 50px 50px 250px" }}
+            style={{ margin: "30px 150px 50px 80px" }}
           >
             Confirm
           </Button>
