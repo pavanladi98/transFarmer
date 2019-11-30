@@ -1,23 +1,23 @@
 .buy-sell {
   display: flex;
   flex-direction: column;
-  margin: 10% 45% 5% 43%;
+  margin: 100px 45px 5px 100px;
   width: 200px;
 }
 .buy-sell > div {
-  margin: 10px 0px;
+  margin: 100px 50px;
 }
 
 .buy-sell-button {
-  width: 150px;
+  width: 200px;
 }
 
 .buy-sell .ant-btn-primary {
-  height: 50px;
+  height: 100px;
 }
 
 .buy-sell .ant-btn-secondary {
-  height: 50px;
+  height: 100px;
 }
 
 .carousel-quote {
