@@ -1,6 +1,12 @@
 import React from "react";
 import { Card, Button, Table } from "antd";
 import { Link } from "react-router-dom";
+import * as languageFile from "./LanguageMessages";
+
+const language =
+  languageFile.languageConfig === "hindi"
+    ? languageFile.hindi
+    : languageFile.english;
 
 export default class BillingPage extends React.Component {
   render() {
@@ -17,35 +23,23 @@ export default class BillingPage extends React.Component {
     dataSource.push({ total: totalPrice, qty: totalQuantity, title: "Total" });
     const columns = [
       {
-        title: "Item",
+        title: language.Item,
         dataIndex: "title",
         key: "item",
-        render: item => (item === "Total" ? <b>{item}</b> : item)
+        render: item => (item === "Total" ? <b>{language.Total}</b> : item)
       },
       {
-        title: "Quantity",
+        title: language.Quantity,
         dataIndex: "qty",
         key: "qty"
-      },
-      // {
-      //   title: "Rate",
-      //   dataIndex: "price",
-      //   key: "price",
-      //   render: text => (text ? <>&#8377;{text}</> : null)
-      // },
-      // {
-      //   title: "Price",
-      //   dataIndex: "total",
-      //   key: "total",
-      //   render: text => <>&#8377;{text}</>
-      // }
+      }
     ];
     delete dataSource.price;
     delete dataSource.total;
     return (
-      <div style={{ background: "#ECECEC"}}>
+      <div style={{ background: "#ECECEC" }}>
         <Card
-          title="Order summary"
+          title={language.OrderSummary}
           bordered={false}
           style={{
             width: "100%",
@@ -62,7 +56,7 @@ export default class BillingPage extends React.Component {
             size="large"
             style={{ margin: "20px 50px 50px 75px" }}
           >
-            Back
+            {language.Back}
           </Button>
         </Link>
         <Link to={type === "sell" ? "/sell/address" : "/buy/address"}>
@@ -72,7 +66,7 @@ export default class BillingPage extends React.Component {
             style={{ margin: "20px 50px 50px 0px" }}
             disabled={!totalQuantity}
           >
-            Confirm
+            {language.Confirm}
           </Button>
         </Link>
       </div>

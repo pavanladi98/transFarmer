@@ -1,6 +1,12 @@
 import React from "react";
 import { List, Avatar, Input, Button } from "antd";
 import { Link } from "react-router-dom";
+import * as languageFile from "./LanguageMessages";
+
+const language =
+  languageFile.languageConfig === "hindi"
+    ? languageFile.hindi
+    : languageFile.english;
 
 class SellPage extends React.Component {
   constructor(props) {
@@ -12,7 +18,7 @@ class SellPage extends React.Component {
         data: [
           {
             id: 0,
-            title: "Rice",
+            title: language.Rice,
             quantity: "40 / kg",
             imgSrc:
               "https://bethlehemplace.org/wp-content/uploads/2013/06/81defb3758f2613d213f771d297601bd_salt-clipart-sack-rice-pencil-and-in-color-salt-clipart-sack-rice-rice-clipart-transparent_360-352.png",
@@ -21,7 +27,7 @@ class SellPage extends React.Component {
           },
           {
             id: 1,
-            title: "Wheat",
+            title: language.Wheat,
             quantity: "20 / kg",
             imgSrc:
               "http://desifoodkart.com/wp-content/uploads/2019/02/Chakki-Atta-Flour.jpg",
@@ -30,7 +36,7 @@ class SellPage extends React.Component {
           },
           {
             id: 2,
-            title: "Tomato",
+            title: language.Tomato,
             quantity: "30 / kg",
             imgSrc: "https://grist.files.wordpress.com/2009/09/tomato.jpg",
             qty: 0,
@@ -77,9 +83,16 @@ class SellPage extends React.Component {
     return (
       <>
         <h1
-          style={{ margin: "30px 60px 20px 50px", width: "300px", textAlign: "center", fontSize: "20px" }}
+          style={{
+            margin: "30px 60px 20px 50px",
+            width: "300px",
+            textAlign: "center",
+            fontSize: "20px"
+          }}
         >
-          {type === "sell" ? "Choose items to sell" : "Choose items to buy"}
+          {type === "sell"
+            ? language.Chooseitemstosell
+            : language.Chooseitemstobuy}
         </h1>
         <div style={{ margin: "0px 10%" }}>
           <List
@@ -124,9 +137,13 @@ class SellPage extends React.Component {
         >
           <Button
             type="primary"
-            style={{ margin: "50px 160px 10px 160px", width: "100px", height: "50px" }}
+            style={{
+              margin: "50px 160px 10px 160px",
+              width: "100px",
+              height: "50px"
+            }}
           >
-            <b>{type === "sell" ? "Proceed" : "Buy"}</b>
+            <b>{type === "sell" ? language.Proceed : language.Buy}</b>
           </Button>
         </Link>
       </>

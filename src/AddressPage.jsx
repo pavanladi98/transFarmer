@@ -1,6 +1,12 @@
 import React from "react";
 import { Card, Button, Radio } from "antd";
 import { Link } from "react-router-dom";
+import * as languageFile from "./LanguageMessages";
+
+const language =
+  languageFile.languageConfig === "hindi"
+    ? languageFile.hindi
+    : languageFile.english;
 
 export default class AddressPage extends React.Component {
   state = {
@@ -122,7 +128,7 @@ export default class AddressPage extends React.Component {
             size="large"
             style={{ margin: "30px 150px 50px 80px" }}
           >
-            Confirm
+            {language.Confirm}
           </Button>
         </Link>
       </div>

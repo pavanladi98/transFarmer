@@ -1,6 +1,12 @@
 import React from "react";
 import { Button, Card, Icon } from "antd";
 import { Link } from "react-router-dom";
+import * as languageFile from "./LanguageMessages";
+
+const language =
+  languageFile.languageConfig === "hindi"
+    ? languageFile.hindi
+    : languageFile.english;
 
 const { Meta } = Card;
 
@@ -36,7 +42,7 @@ export default class SuccessPage extends React.Component {
           />
         </Card>
         <Card
-          title={"Selected Address"}
+          title={language.Selectedaddress}
           style={{
             width: "75%",
             height: "210px",
@@ -56,15 +62,6 @@ export default class SuccessPage extends React.Component {
           {address.State}
           <br />
         </Card>
-        {/* <Card
-          style={{
-            width: "95%",
-            margin: "50px auto auto auto",
-            backgroundColor: "#ECECEC"
-          }}
-        >
-          
-        </Card> */}
         <Link to={{ pathname: "/" }}>
           <Button
             type="secondary"
