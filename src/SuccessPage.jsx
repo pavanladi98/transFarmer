@@ -11,8 +11,8 @@ export default class SuccessPage extends React.Component {
       <div style={{ padding: "30px" }}>
         <Card
           style={{
-            width: "40%",
-            margin: "5% auto auto auto",
+            width: "80%",
+            margin: "50px auto auto auto",
             backgroundColor: "#ECECEC"
           }}
         >
@@ -37,7 +37,7 @@ export default class SuccessPage extends React.Component {
           <Button
             type="secondary"
             size="large"
-            style={{ margin: "7% 5% 0% 43%" }}
+            style={{ margin: "30px 100px 50px 100px" }}
           >
             Go back to Home
           </Button>
