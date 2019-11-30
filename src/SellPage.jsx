@@ -77,9 +77,9 @@ class SellPage extends React.Component {
     return (
       <>
         <h1
-          style={{ margin: "2% 35% 1% 35%", width: "30%", textAlign: "center" }}
+          style={{ margin: "2% 35% 1% 35%", width: "75%", textAlign: "center", fontSize: "20px" }}
         >
-          {type === "sell" ? "Sell items here" : "Choose items to buy"}
+          {type === "sell" ? "Choose items to sell" : "Choose items to buy"}
         </h1>
         <div style={{ margin: "0px 10%" }}>
           <List
@@ -94,7 +94,7 @@ class SellPage extends React.Component {
                   }
                   title={item.title}
                   description={
-                    type === "sell" ? <>&#8377;{item.quantity}</> : ""
+                    type === "sell" ? "" : <>&#8377;{item.quantity}</>
                   }
                   style={{ marginLeft: "20px" }}
                 />
