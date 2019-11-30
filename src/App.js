@@ -6,6 +6,7 @@ import SellPage from "./SellPage.jsx";
 import BillingPage from "./BillingPage.jsx";
 import BuyBillingPage from "./BuyBillingPage.jsx";
 import SuccessPage from "./SuccessPage.jsx";
+import AddressPage from "./AddressPage";
 import "./App.css";
 import "antd/dist/antd.css";
 
@@ -59,6 +60,15 @@ function App() {
         path="/buy/billing"
         render={props => <BuyBillingPage {...props} type="buy" />}
       />
+      <Route
+        path="/sell/address"
+        render={props => <AddressPage {...props} type="sell" />}
+      />
+      <Route
+        path="/buy/address"
+        render={props => <AddressPage {...props} type="buy" />}
+      />
+
       <Route
         path="/sell/success"
         render={props => <SuccessPage {...props} type="sell" />}

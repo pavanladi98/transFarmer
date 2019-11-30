@@ -7,6 +7,7 @@ const { Meta } = Card;
 export default class SuccessPage extends React.Component {
   render() {
     const { type } = this.props;
+    const address = this.props.location.state[0];
     return (
       <div style={{ padding: "30px" }}>
         <Card
@@ -33,6 +34,15 @@ export default class SuccessPage extends React.Component {
             }
           />
         </Card>
+        {/* <Card
+          style={{
+            width: "95%",
+            margin: "50px auto auto auto",
+            backgroundColor: "#ECECEC"
+          }}
+        >
+          
+        </Card> */}
         <Link to={{ pathname: "/" }}>
           <Button
             type="secondary"

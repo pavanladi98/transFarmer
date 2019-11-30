@@ -65,7 +65,7 @@ export default class BillingPage extends React.Component {
             Back
           </Button>
         </Link>
-        <Link to={type === "sell" ? "/sell/success" : "/buy/success"}>
+        <Link to={type === "sell" ? "/sell/address" : "/buy/address"}>
           <Button
             type="primary"
             size="large"
