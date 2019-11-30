@@ -76,7 +76,9 @@ class SellPage extends React.Component {
     const { type } = this.props;
     return (
       <>
-        <h1 style={{ margin: "2% 35% 1% 35%", width: "30%", textAlign: "center" }}>
+        <h1
+          style={{ margin: "2% 35% 1% 35%", width: "30%", textAlign: "center" }}
+        >
           {type === "sell" ? "Sell items here" : "Choose items to buy"}
         </h1>
         <div style={{ margin: "0px 10%" }}>
@@ -91,7 +93,9 @@ class SellPage extends React.Component {
                     <Avatar src={item.imgSrc} style={{ marginRight: "20px" }} />
                   }
                   title={item.title}
-                  description={<>&#8377;{item.quantity}</>}
+                  description={
+                    type === "sell" ? <>&#8377;{item.quantity}</> : ""
+                  }
                   style={{ marginLeft: "20px" }}
                 />
                 <div>
