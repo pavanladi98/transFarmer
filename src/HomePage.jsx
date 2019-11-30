@@ -26,7 +26,7 @@ export default class HomePage extends React.Component {
         <Carousel
           autoplay
           style={{
-            margin: "100px auto 10px auto",
+            margin: "100px auto 20px auto",
             width: "350px",
             padding: "10px"
           }}

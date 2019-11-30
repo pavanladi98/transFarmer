@@ -77,7 +77,7 @@ class SellPage extends React.Component {
     return (
       <>
         <h1
-          style={{ margin: "2% 35% 1% 35%", width: "75%", textAlign: "center", fontSize: "20px" }}
+          style={{ margin: "30px 50px 10px 50px", width: "300px", textAlign: "center", fontSize: "20px" }}
         >
           {type === "sell" ? "Choose items to sell" : "Choose items to buy"}
         </h1>
@@ -124,9 +124,9 @@ class SellPage extends React.Component {
         >
           <Button
             type="primary"
-            style={{ margin: "3% 45% 0% 45%", width: "100px", height: "50px" }}
+            style={{ margin: "10px 45% 10px 45%", width: "100px", height: "50px" }}
           >
-            <b>{type === "sell" ? "Sell" : "Buy"}</b>
+            <b>{type === "sell" ? "Proceed" : "Buy"}</b>
           </Button>
         </Link>
       </>
