@@ -22,28 +22,28 @@ export default class AddressPage extends React.Component {
     const { type } = this.props;
     const addresses = [
       {
-        Name: "Hacker Kumar",
+        Name: "Pavan",
         Door: "8-6-107",
         Near: "near SBI",
-        PinCode: "123456",
-        Village: "Vizag",
-        State: "State Pradesh"
+        PinCode: "532195",
+        Village: "Srikakulam",
+        State: "Andhra Pradesh"
       },
       {
-        Name: "Hacker Kumar",
+        Name: "Pavan",
         Door: "1-2-304",
         Near: "near add2",
-        PinCode: "123456",
-        Village: "Vizag",
-        State: "State Pradesh"
+        PinCode: "532195",
+        Village: "Srikakulam",
+        State: "Andhra Pradesh"
       },
       {
-        Name: "Abcd hacker",
+        Name: "Desik",
         Door: "19-2-304",
         Near: "near add3",
-        PinCode: "123456",
-        Village: "Vizag",
-        State: "State Pradesh"
+        PinCode: "500032",
+        Village: "Hyderabad",
+        State: "Telangana"
       }
     ];
     return (
